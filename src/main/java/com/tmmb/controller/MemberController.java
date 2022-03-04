@@ -55,5 +55,13 @@ public class MemberController {
 		return "/member/login";
 	}
 	
+	// 회원가입
+	@RequestMapping(value = "joinForm", method = RequestMethod.GET)
+	public String join() {
+		log.info("member - joinForm");
+		
+		return "member/joinForm";
+	}
+	
 	
 }

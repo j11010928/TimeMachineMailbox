@@ -12,5 +12,5 @@
     <a href='<c:url value="/member/loginForm"/>'>로그인</a>    
 </span>
 <span>
-    <a href='<c:url value="/member/join"/>'>회원가입</a>    
+    <a href='<c:url value="/member/joinForm"/>'>회원가입</a>    
 </span>
