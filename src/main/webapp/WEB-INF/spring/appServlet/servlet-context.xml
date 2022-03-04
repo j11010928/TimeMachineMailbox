@@ -22,6 +22,8 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="com.tmmb.controller" />
+	<context:component-scan base-package="com.tmmb.service" />
+    <context:component-scan base-package="com.tmmb.dao" />
 	
 	
 	
