@@ -4,7 +4,7 @@
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 
 <head>
-    <link href="${pageContext.request.contextPath}/resource/css/default.css" rel="stylesheet"/> 
+    <link href="${path}/resource/css/default.css" rel="stylesheet"/> 
 </head>
     
 <span class="logo">
