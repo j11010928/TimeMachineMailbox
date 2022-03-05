@@ -11,9 +11,9 @@ import lombok.Setter;
 @Setter
 public class MemberBean {
 	private String id;
-	private Number phone;
-	private String email;
-	private String name;
 	private String pass;
+	private String name;
+	private String email;
+	private String phone;
 	private Date reg_date;
 }
