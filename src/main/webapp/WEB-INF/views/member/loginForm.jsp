@@ -8,7 +8,9 @@
 <meta charset="UTF-8">
 <title>tmmb-login</title>
 </head>
-
+<header>
+    <jsp:include page="../inc/top.jsp"></jsp:include>
+</header>
 <body>
     <form action='<c:url value="/member/login"/>' method="post">
         <span>아이디 or 이메일</span>

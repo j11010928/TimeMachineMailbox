@@ -71,11 +71,12 @@ public class MemberController {
 			
 		} else {
 			// 아이디, 비밀번호 틀림
-			log.info("member - login 로그인 실패!!!");
+			log.error("member - login 로그인 실패!!!");
 			model.addAttribute("message", "아이디와 비밀번호가 일치하지 않습니다.");
 			
 			return "member/message";
 		}
+		
 		
 	}
 	
