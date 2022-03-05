@@ -1,5 +1,7 @@
 package com.tmmb.service;
 
+import java.sql.*;
+
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
@@ -21,6 +23,10 @@ public class MemberServiceImpl implements MemberService {
 		return memberDAO.loginCheck(mb);
 	}
 	
-
+	public void joinMember(MemberBean mb) {
+		mb.setReg_date(new Timestamp(System.currentTimeMillis()));
+		memberDAO.joinMember(mb);
+	}
+	
 
 }

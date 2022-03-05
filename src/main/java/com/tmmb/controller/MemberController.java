@@ -31,6 +31,16 @@ public class MemberController {
 	// 가상주소
 	// http://localhost:8080/controller/member/loginForm
 	
+	// 메인
+	@RequestMapping(value = "main", method = RequestMethod.GET)
+	public String main() {
+		log.info("member - main!!!!!");
+		
+		return "member/main";
+	}
+	
+	
+	
 	
 	// 로그인 
 	@RequestMapping(value = "loginForm", method = RequestMethod.GET)
@@ -58,7 +68,7 @@ public class MemberController {
 			session.setAttribute("id", mb.getId());
 			
 			// 메인화면 이동
-			return "member/main";
+			return "redirect:/member/main";
 			
 		} else {
 			// 아이디, 비밀번호 틀림
@@ -78,5 +88,26 @@ public class MemberController {
 		return "member/joinForm";
 	}
 	
+	
+	// 회원가입 
+	@RequestMapping(value = "member/join", method = RequestMethod.POST)
+	public String joinPost(MemberBean mb) {
+		log.info("member - join!!!!!");
+		memberService.joinMember(mb);
+		
+		return "redirect:/";
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
 	
 }

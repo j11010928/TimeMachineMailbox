@@ -1,6 +1,6 @@
 package com.tmmb.domain;
 
-import java.sql.Date;
+import java.sql.*;
 
 import javax.annotation.Generated;
 
@@ -15,5 +15,5 @@ public class MemberBean {
 	private String name;
 	private String email;
 	private String phone;
-	private Date reg_date;
+	private Timestamp reg_date;
 }

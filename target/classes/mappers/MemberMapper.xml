@@ -9,7 +9,10 @@
         SELECT * FROM member WHERE id=#{id} AND pass=#{pass}
     </select>  
   
-  
+   <insert id="joinMember" >
+   		insert into member (id,pass,name,email,phone,reg_date)
+   		value(#{id},#{pass},#{name},#{email},#{phone},#{reg_date})
+   </insert>
   
   
     
