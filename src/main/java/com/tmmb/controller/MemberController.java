@@ -37,7 +37,7 @@ public class MemberController {
 	public String main() {
 		log.info("member - main!!!!!");
 		
-		return "member/main";
+		return "main";
 	}
 	
 	
@@ -67,7 +67,7 @@ public class MemberController {
 			session.setAttribute("id", mb.getId());
 			
 			// 메인화면 이동
-			return "redirect:/member/main";
+			return "redirect:main";
 			
 		} else {
 			// 아이디, 비밀번호 틀림
