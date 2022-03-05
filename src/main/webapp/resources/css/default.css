@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Noto Serif KR', serif; 
+    font-size: 18px;
+}
+ 
+header {
+	/* 화면 고정 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    /* 기본 설정 */
+    height: 100px;
+    padding: 10px;
+    color: #4271ce;
+    font-weight: bold;
+    background-color: #fceade;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+/*     z-index: 999; */
+}
+
+body {
+/*     background-color: #fceade; */
+    color:#4271ce;
+    padding-top: 130px;
+/*     padding: 35px; */
+/*     margin-top: 120px; */
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:link, a:visited {color: #4271ce;}
+a:hover, a:active {color: #5e78a6;}
+
+.logo{
+    float: left;
+    padding: 10px;
+    margin: 10px;
+}
+
+.loginBar{
+    float: right;
+    overflow: hidden;
+    list-style: none;
+}
+
+.login{
+    padding: 10px 0 10px 20px;
+/*     margin: 10px; */
+    float: left;
+
+}
+
+.join{
+    padding: 10px 20px 10px 20px;
+/*     margin: 10px; */
+    float: right;
+}
+
+
+
+/* header .loginBar > li.last a{ */
+/* 	padding:10px 8px;  */
+/* 	border-right:1px solid #4271ce;  */
+/* 	border-left:1px solid #4271ce; */
+/* } */
+
+
