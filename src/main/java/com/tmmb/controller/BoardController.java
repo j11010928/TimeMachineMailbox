@@ -24,12 +24,12 @@ public class BoardController {
 	
 	private static final Logger log = LoggerFactory.getLogger(BoardController.class);
 	
-	@Inject
-	private MemberService memberService;
+//	@Inject
+//	private MemberService memberService;
 	
 	
 	// 가상주소
-	// http://localhost:8080/controller/member/loginForm
+	// http://localhost:8080/controller/board/to_me
 	
 
 	
