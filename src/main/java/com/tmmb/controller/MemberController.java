@@ -96,17 +96,8 @@ public class MemberController {
 		
 		return "redirect:/";
 	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
+	
+	// 글쓰기
 	
 }
