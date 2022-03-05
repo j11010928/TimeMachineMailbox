@@ -6,6 +6,7 @@
 <html>
 <head>
 	<title>Tmmb</title>
+	<link href="${pageContext.request.contextPath}/resource/css/default.css" rel="stylesheet"/> 
 </head>
 <header>
     <jsp:include page="inc/top.jsp"></jsp:include>

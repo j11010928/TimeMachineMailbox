@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <from action='<c:url value="/member/login"/>' method="post">
+    <form action='<c:url value="/member/login"/>' method="post">
         <span>아이디 or 이메일</span>
            <div>
-                <input type="text" name="email" id="email" placeholder="아이디 or 이메일(xxx@xxx.xxx)">
+                <input type="text" name="id" id="id" placeholder="아이디 or 이메일(xxx@xxx.xxx)">
            </div>
            <br> 
         <span>비밀번호</span>            
@@ -25,6 +25,6 @@
                 <input type="submit" value="로그인" id="submit">
                 <input type="reset" value="취소">
            </div>
-    </from>
+    </form>
 </body>
 </html>
