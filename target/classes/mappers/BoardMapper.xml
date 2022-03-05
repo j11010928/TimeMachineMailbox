@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tmmb.mapper.BoardMapper">
+
+
+  <select resultType="java.lang.Integer" id="getMaxIdx">
+  		select max(idx) from board 
+  </select>
+    
+   
+   <insert id="insertBoard" >
+   		insert into board (idx,name,title,content,reg_date,file,read_count,like_count,private_yn)
+   		value(#{idx},#{name},#{title},#{content},#{reg_date},#{file},#{read_count},#{like_count},#{private_yn})
+   </insert>
+  
+
+</mapper>

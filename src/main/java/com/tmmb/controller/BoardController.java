@@ -14,8 +14,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.tmmb.domain.MemberBean;
-import com.tmmb.service.MemberService;
+import com.tmmb.domain.*;
+import com.tmmb.service.*;
 
 
 @Controller
@@ -24,8 +24,8 @@ public class BoardController {
 	
 	private static final Logger log = LoggerFactory.getLogger(BoardController.class);
 	
-//	@Inject
-//	private MemberService memberService;
+	@Inject
+	private BoardService boardService;
 	
 	
 	// 가상주소
@@ -34,7 +34,7 @@ public class BoardController {
 
 	
 	// 나에게
-	@RequestMapping(value = "board/to_me", method = RequestMethod.GET)
+	@RequestMapping(value = "to_me", method = RequestMethod.GET)
 	public String toMe() {
 		log.info("board - to_me!!!!!");
 		
@@ -43,7 +43,7 @@ public class BoardController {
 	}
 	
 	// 친구에게
-	@RequestMapping(value = "board/to_friend", method = RequestMethod.GET)
+	@RequestMapping(value = "to_friend", method = RequestMethod.GET)
 	public String toFriend() {
 		log.info("board - to_friend!!!!!");
 		
@@ -52,7 +52,7 @@ public class BoardController {
 	}
 	
 	// 하늘에게
-	@RequestMapping(value = "board/to_sky", method = RequestMethod.GET)
+	@RequestMapping(value = "to_sky", method = RequestMethod.GET)
 	public String toSky() {
 		log.info("board - to_sky!!!!!");
 		
@@ -61,5 +61,13 @@ public class BoardController {
 	}
 	
 	// 글쓰기
+	@RequestMapping(value = "toMeForm", method = RequestMethod.POST)
+	public String toMeForm(BoardBean bb) {
+		log.info("board - insert toMeFormAction!!!!");
+		log.info("board - insert toMeFormAction!!!!, title : {}, yn : {}", bb.getTitle(), bb.getPrivate_yn());
+		boardService.insertBoard(bb);
+		
+		return "main";
+	}
 	
 }
