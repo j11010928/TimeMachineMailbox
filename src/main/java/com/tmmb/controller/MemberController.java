@@ -25,7 +25,7 @@ public class MemberController {
 	private static final Logger log = LoggerFactory.getLogger(MemberController.class);
 	
 	@Inject
-//	private MemberService memberservice;
+	private MemberService memberService;
 	
 	
 	// 가상주소
@@ -43,16 +43,31 @@ public class MemberController {
 	
 	// 로그인 post Action
 	@RequestMapping(value = "login", method = RequestMethod.POST)
-	public String insertPost(MemberBean mb, HttpSession session, Model model) {
+	public String loginPost(MemberBean mb, HttpSession session, Model model) {
 		log.info("member - insert loginAction!!!!");
 		log.info("member - insert loginAction!!!!, ID : {}, Pass : {}", mb.getId(), mb.getPass());
 		
-		// login 작업
-//		MemberBean mb2 =  
+		// login check
+		MemberBean mb2 = memberService.loginCheck(mb);
 		
+		// 아이디가 null이 아닐 때
+		if (mb2 != null) {
+			log.info("member - login 로그인 성공!!!");
+			
+			// 세션값 생성
+			session.setAttribute("id", mb.getId());
+			
+			// 메인화면 이동
+			return "member/main";
+			
+		} else {
+			// 아이디, 비밀번호 틀림
+			log.info("member - login 로그인 실패!!!");
+			model.addAttribute("message", "아이디와 비밀번호가 일치하지 않습니다.");
+			
+			return "member/message";
+		}
 		
-		
-		return "/member/login";
 	}
 	
 	// 회원가입
