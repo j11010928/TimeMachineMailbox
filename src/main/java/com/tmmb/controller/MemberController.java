@@ -31,6 +31,7 @@ public class MemberController {
 	// 가상주소
 	// http://localhost:8080/controller/member/loginForm
 	
+	
 	// 메인
 	@RequestMapping(value = "main", method = RequestMethod.GET)
 	public String main() {
@@ -40,9 +41,7 @@ public class MemberController {
 	}
 	
 	
-	
-	
-	// 로그인 
+	// 로그인 Form
 	@RequestMapping(value = "loginForm", method = RequestMethod.GET)
 	public String login() {
 		log.info("member - loginForm!!!!!");
@@ -51,7 +50,7 @@ public class MemberController {
 	}
 	
 	
-	// 로그인 post Action
+	// 로그인
 	@RequestMapping(value = "login", method = RequestMethod.POST)
 	public String loginPost(MemberBean mb, HttpSession session, Model model) {
 		log.info("member - insert loginAction!!!!");
@@ -80,7 +79,7 @@ public class MemberController {
 		
 	}
 	
-	// 회원가입
+	// 회원가입 Form
 	@RequestMapping(value = "joinForm", method = RequestMethod.GET)
 	public String join() {
 		log.info("member - joinForm");
