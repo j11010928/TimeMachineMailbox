@@ -7,7 +7,7 @@
 
 
 <span class="logo">
-    <a href="./">타임머신우체통(이미지로 만들 예정)</a>    
+    <a href='<c:url value="/"/>'>타임머신우체통(이미지로 만들 예정)</a>    
 </span>
 
 

@@ -7,13 +7,17 @@
 <head>
 <meta charset="UTF-8">
 <title>tmmb-login</title>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
+<link href="${path}/resources/css/default.css" rel="stylesheet"/> 
 </head>
-
+<header>
+    <jsp:include page="../inc/top.jsp"></jsp:include>
+</header>
 <body>
     <form action='<c:url value="/member/login"/>' method="post">
-        <span>아이디 or 이메일</span>
+        <span>아이디</span>
            <div>
-                <input type="text" name="id" id="id" placeholder="아이디 or 이메일(xxx@xxx.xxx)">
+                <input type="text" name="id" id="id" placeholder="아이디 ">
            </div>
            <br> 
         <span>비밀번호</span>            
