@@ -32,15 +32,6 @@ public class MemberController {
 	// http://localhost:8080/controller/member/loginForm
 	
 	
-	// 메인
-	@RequestMapping(value = "main", method = RequestMethod.GET)
-	public String main() {
-		log.info("member - main!!!!!");
-		
-		return "main";
-	}
-	
-	
 	// 로그인 Form
 	@RequestMapping(value = "loginForm", method = RequestMethod.GET)
 	public String login() {
@@ -59,24 +50,23 @@ public class MemberController {
 		// login check
 		MemberBean mb2 = memberService.loginCheck(mb);
 		
-		// 아이디가 null이 아닐 때
-		if (mb2 != null) {
+		// 비밀번호가 null이 아닐 때
+		if (mb2.getPass() != null) {
 			log.info("member - login 로그인 성공!!!");
 			
 			// 세션값 생성
 			session.setAttribute("id", mb.getId());
 			
-			// 메인화면 이동
-			return "redirect:main";
+			// 홈화면 이동
+			return "redirect:../";
 			
 		} else {
 			// 아이디, 비밀번호 틀림
 			log.error("member - login 로그인 실패!!!");
-			model.addAttribute("message", "아이디와 비밀번호가 일치하지 않습니다.");
+			model.addAttribute("loginMessage", "아이디와 비밀번호가 일치하지 않습니다.");
 			
 			return "member/message";
 		}
-		
 		
 	}
 	
@@ -96,9 +86,29 @@ public class MemberController {
 		memberService.joinMember(mb);
 		
 		return "redirect:/";
-	
 	}
 	
-	// 글쓰기
+	// 마이페이지
+	@RequestMapping(value = "mypage", method = RequestMethod.GET)
+	public String mypage() {
+		log.info("member - mypage!!!");
+		
+		return "member/mypage";
+	}
+	
+	// 로그아웃
+	@RequestMapping(value = "logout", method = RequestMethod.GET)
+	public String logout(HttpSession session, Model model) {
+		log.info("member - logout!!!");
+		
+		model.addAttribute("logoutMessage", "다음에 다시봐요~");
+		
+		// session 초기화
+		session.invalidate();
+		log.info("member - logout, 세션 초기화~~~");
+		
+		return "member/message";
+		
+	}
 	
 }

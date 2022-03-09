@@ -6,18 +6,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>tmmb-login</title>
+<title>느리밍 로그인</title>
+
+<!-- default.css 경로 지정 -->
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 <link href="${path}/resources/css/default.css" rel="stylesheet"/> 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@900&display=swap" rel="stylesheet">
 
 </head>
+
+<!-- header > top.jsp -->
 <header>
     <jsp:include page="../inc/top.jsp"></jsp:include>
 </header>
+
 <body>
     <form action='<c:url value="/member/login"/>' method="post">
         <span>아이디</span>
