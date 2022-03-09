@@ -30,6 +30,9 @@
         </li>
          
 	</c:if>
+	</ul>
+	
+	<ul class="mypageBar">
 	<!-- session이 null일 때 -->
 	<c:if test="${empty sessionScope.id }">
 	    <li class="login">

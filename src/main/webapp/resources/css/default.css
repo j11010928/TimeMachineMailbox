@@ -67,12 +67,22 @@ a:hover, a:active {color: #5e78a6;}
     float: right;
 }
 
+.mypageBar{
+    float: right;
+    overflow: hidden;
+    list-style: none;
+}
 
+.mypage{
+    padding: 10px 0 10px 20px;
+/*     margin: 10px; */
+    float: left;
 
-/* header .loginBar > li.last a{ */
-/* 	padding:10px 8px;  */
-/* 	border-right:1px solid #4271ce;  */
-/* 	border-left:1px solid #4271ce; */
-/* } */
+}
 
+.logout{
+    padding: 10px 20px 10px 20px;
+/*     margin: 10px; */
+    float: right;
+}
 
