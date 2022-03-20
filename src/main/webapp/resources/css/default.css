@@ -48,41 +48,23 @@ a:hover, a:active {color: #5e78a6;}
     margin: 10px;
 }
 
-.loginBar{
+.loginBar, .mypageBar{
     float: right;
     overflow: hidden;
     list-style: none;
 }
 
-.login{
+.login, .mypage{
     padding: 10px 0 10px 20px;
 /*     margin: 10px; */
     float: left;
 
 }
 
-.join{
+.join, .logout{
     padding: 10px 20px 10px 20px;
 /*     margin: 10px; */
     float: right;
 }
 
-.mypageBar{
-    float: right;
-    overflow: hidden;
-    list-style: none;
-}
-
-.mypage{
-    padding: 10px 0 10px 20px;
-/*     margin: 10px; */
-    float: left;
-
-}
-
-.logout{
-    padding: 10px 20px 10px 20px;
-/*     margin: 10px; */
-    float: right;
-}
 
