@@ -50,8 +50,8 @@ public class MemberController {
 		// login check
 		MemberBean mb2 = memberService.loginCheck(mb);
 		
-		// 비밀번호가 null이 아닐 때
-		if (mb2.getPass() != null) {
+		// null이 아닐 때
+		if (mb2 != null) {
 			log.info("member - login 로그인 성공!!!");
 			
 			// 세션값 생성
@@ -63,7 +63,7 @@ public class MemberController {
 		} else {
 			// 아이디, 비밀번호 틀림
 			log.error("member - login 로그인 실패!!!");
-			model.addAttribute("loginMessage", "아이디와 비밀번호가 일치하지 않습니다.");
+			model.addAttribute("message", "아이디와 비밀번호가 일치하지 않습니다.");
 			
 			return "member/message";
 		}
@@ -101,7 +101,7 @@ public class MemberController {
 	public String logout(HttpSession session, Model model) {
 		log.info("member - logout!!!");
 		
-		model.addAttribute("logoutMessage", "다음에 다시봐요~");
+		model.addAttribute("messages", "다음에 다시봐요~");
 		
 		// session 초기화
 		session.invalidate();

@@ -9,15 +9,15 @@
 <body>
     <!-- 로그인 시 메시지 -->
     <script type="text/javascript">
-	    var loginMessage='${loginMessage}';
-	    alert(loginMessage);
+	    var m='${message}';
+	    alert(m);
 	    history.back();
 	</script>
 	
 	<!-- 로그아웃 시 메시지 -->
     <script type="text/javascript">
-        var logoutMessage ='${logoutMessage}';
-        alert(logoutMessage);
+        var m ='${message}';
+        alert(m);
         location.href="/";
     </script>
 </body>
