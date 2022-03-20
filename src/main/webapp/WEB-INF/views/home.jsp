@@ -6,8 +6,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scle=1,">
-<title>느리밍</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>느리밍 홈</title>
 <style>
 			img { display: block; margin: 0px auto; }
 </style>
@@ -26,9 +26,12 @@
 
 <!-- 천득이의 연습공간 -->
 <div class='letter'>
-	<img src="resources/img/letter.jpg" width="50%" height="50%" 
-	 style="box-shadow:5px 5px 10px grey;"
-  >
+    <!-- 클릭시 main.jsp로 이동 -->
+	<a href='<c:url value="/main"/>'>
+	   <img src="resources/img/letter.jpg" width="50%" height="50%" 
+	        style="box-shadow:5px 5px 10px grey;">
+	</a>
+  
 </div>
 
 
@@ -50,10 +53,6 @@
 <!-- -------------------------------------------------- -->
 
 <body>
-    <a href='<c:url value="/board/to_me"/>'>나에게 띄우는 편지</a>
-    <a href='<c:url value="/board/to_friend"/>'>친구에게 띄우는 편지</a>
-    <a href='<c:url value="/board/to_sky"/>'>하늘에 띄우는 편지</a>
-
 
 </body>
 </html>

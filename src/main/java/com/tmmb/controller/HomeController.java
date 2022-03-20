@@ -23,7 +23,7 @@ public class HomeController {
 	
 
 	
-	// Main Home 호출
+	// Home 호출
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		log.info("Welcome home! The client locale is {}.", locale);
@@ -38,5 +38,12 @@ public class HomeController {
 		return "home";
 	}
 	
+	// main 호출
+	@RequestMapping(value = "main", method = RequestMethod.GET)
+	public String main() {
+		log.info("main!!!");
+		
+		return "/main";
+	}
 
 }
