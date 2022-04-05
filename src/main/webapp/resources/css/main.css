@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Noto Serif KR', serif; 
+    font-size: 18px;
+}
+
+body {
+    color:#4271ce;
+    padding-top: 130px;
+}
+
+.parent {
+  display: flex;
+  border: 2px dotted;
+  padding: 6px;
+  height: 650px;
+}
+
+.parent .child{
+  flex: 1;
+  text-align: center;
+}
+
+.toMe{
+    background-color: #f9b78e;
+}    
+.toFriend{
+    background-color: #9ee0a5;
+}
+.toSky{
+    background-color: #ca9bc0;
+}

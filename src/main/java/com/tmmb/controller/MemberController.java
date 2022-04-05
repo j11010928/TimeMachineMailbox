@@ -1,5 +1,6 @@
 package com.tmmb.controller;
 
+import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -64,6 +65,7 @@ public class MemberController {
 			// 아이디, 비밀번호 틀림
 			log.error("member - login 로그인 실패!!!");
 			model.addAttribute("message", "아이디와 비밀번호가 일치하지 않습니다.");
+			model.addAttribute("url", "loginForm");
 			
 			return "member/message";
 		}
@@ -101,11 +103,12 @@ public class MemberController {
 	public String logout(HttpSession session, Model model) {
 		log.info("member - logout!!!");
 		
-		model.addAttribute("messages", "다음에 다시봐요~");
-		
 		// session 초기화
 		session.invalidate();
 		log.info("member - logout, 세션 초기화~~~");
+		
+		model.addAttribute("message", "다음에 다시봐요~");
+		model.addAttribute("url", "../");
 		
 		return "member/message";
 		
