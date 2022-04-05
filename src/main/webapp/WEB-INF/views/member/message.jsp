@@ -7,18 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <!-- 로그인 시 메시지 -->
+    <!-- 메시지 -->
     <script type="text/javascript">
-	    var m='${message}';
-	    alert(m);
-	    history.back();
+	    var msg = '${message}';
+	    var url = '${url}';
+	    alert(msg);
+	    document.location.href = url;
+	    
+// 	    history.back();
 	</script>
 	
-	<!-- 로그아웃 시 메시지 -->
-    <script type="text/javascript">
-        var m ='${message}';
-        alert(m);
-        location.href="/";
-    </script>
 </body>
 </html>

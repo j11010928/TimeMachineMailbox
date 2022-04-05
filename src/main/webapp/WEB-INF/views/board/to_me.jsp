@@ -6,10 +6,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ToMe</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@900&display=swap" rel="stylesheet">
+<title>나에게 띄우는 편지</title>
+
+<!-- default.css 경로 지정 -->
+<c:set var="path" value="${pageContext.request.contextPath}"/>
+<link href="${path}/resources/css/default.css" rel="stylesheet"/> 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@900&display=swap" rel="stylesheet">
+
 </head>
 <header>
     <jsp:include page="../inc/top.jsp"></jsp:include>
