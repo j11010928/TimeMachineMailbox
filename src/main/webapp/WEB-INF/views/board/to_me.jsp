@@ -47,7 +47,7 @@
 			<textarea rows = "1" style = "width:40%;  resize:none" name = "title"></textarea><br>
 			<textarea  rows="50" style = "width:40%;  resize:none" name = "content">
 			</textarea> <br>
-			
+			<input type = 'file' name = 'file'>
 			<div >
 				공유하기<input type ="radio"  name = "private_yn" value ="n">
 				나만보기<input type ="radio"  name = "private_yn" value ="y"> <br>

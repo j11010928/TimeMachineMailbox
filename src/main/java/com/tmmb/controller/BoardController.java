@@ -1,18 +1,21 @@
 package com.tmmb.controller;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
 
+import java.io.*;
+import java.util.*;
+
+import javax.annotation.*;
 import javax.inject.Inject;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.*;
 
 import com.tmmb.domain.*;
 import com.tmmb.service.*;
@@ -22,10 +25,15 @@ import com.tmmb.service.*;
 @RequestMapping("/board/*")
 public class BoardController {
 	
-	private static final Logger log = LoggerFactory.getLogger(BoardController.class);
-	
 	@Inject
 	private BoardService boardService;
+	
+	@Resource(name = "uploadPath")
+	private String uploadPath;
+	
+	
+	private static final Logger log = LoggerFactory.getLogger(BoardController.class);
+	
 	
 	
 	// 가상주소
@@ -62,10 +70,27 @@ public class BoardController {
 	
 	// 글쓰기
 	@RequestMapping(value = "toMeForm", method = RequestMethod.POST)
-	public String toMeForm(BoardBean bb) {
-		log.info("board - insert toMeFormAction!!!!");
-		log.info("board - insert toMeFormAction!!!!, title : {}, yn : {}", bb.getTitle(), bb.getPrivate_yn());
+	public String toMeForm(HttpServletRequest request, MultipartFile file ) throws Exception {
+		
+//		log.info("파일이름 : {} " , file.getOriginalFilename());
+//		log.info("파일크기 : {} " , file.getSize());
+//		log.info("파일타입 : {} " , file.getContentType());
+		
+		UUID uid = UUID.randomUUID();
+		String saveName = uid.toString()+"_"+file.getOriginalFilename();
+		File target = new File(uploadPath, saveName);
+		FileCopyUtils.copy(file.getBytes(), target);
+		
+		BoardBean bb = new BoardBean();
+		bb.setContent(request.getParameter("content"));
+		bb.setTitle(request.getParameter("title"));
+		bb.setPrivate_yn(request.getParameter("private_yn"));
+		
 		boardService.insertBoard(bb);
+		
+//		log.info("board - insert toMeFormAction!!!!");
+//		log.info("board - insert toMeFormAction!!!!, title : {}, yn : {}", bb.getTitle(), bb.getPrivate_yn());
+//		boardService.insertBoard(bb);
 		
 		return "main";
 	}
