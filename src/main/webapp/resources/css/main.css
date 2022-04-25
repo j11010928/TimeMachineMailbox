@@ -3,12 +3,12 @@
 * {
     margin: 0; 
     padding: 0; 
-    font-family: 'Noto Serif KR', serif; 
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 18px;
 }
 
 body {
-    color:#4271ce;
+    color:#2C304D;
     padding-top: 130px;
 }
 
@@ -32,4 +32,9 @@ body {
 }
 .toSky{
     background-color: #ca9bc0;
+}
+
+provision {
+	text-decoration: underline;
+	color: #4271CE;
 }

@@ -3,7 +3,7 @@
 * {
     margin: 0; 
     padding: 0; 
-    font-family: 'Noto Serif KR', serif; 
+    font-family: 'Noto Sans KR', sans-serif; 
     font-size: 18px;
 }
  
@@ -15,20 +15,22 @@ header {
     right: 0;
     
     /* 기본 설정 */
-    height: 100px;
+    height: 60px;
     padding: 10px;
-    color: #4271ce;
+    color: #FFFFFF;
     font-weight: bold;
-    background-color: #fceade;
+    background-color: #2C304D;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: solid 2px;
+    border-bottom-color: #4271CE;
 /*     z-index: 999; */
 }
 
 body {
-/*     background-color: #fceade; */
-    color:#4271ce;
+    background-color: #2C304D;
+    color:#FFFFFF;
     padding-top: 130px;
 /*     padding: 35px; */
 /*     margin-top: 120px; */
@@ -39,8 +41,8 @@ a{
     font-weight: bold;
 }
 
-a:link, a:visited {color: #4271ce;}
-a:hover, a:active {color: #5e78a6;}
+a:link, a:visited {color: #FFFFFF;}
+a:hover, a:active {color: #4271CE;}
 
 .logo{
     float: left;
