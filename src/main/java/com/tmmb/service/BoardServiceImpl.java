@@ -23,12 +23,10 @@ public class BoardServiceImpl implements BoardService {
 		// num구해서 +1 넣기
 				if(boardDAO.getMaxIdx()==null) {
 					bb.setIdx(1);
-					//답글 관련
-//					bb.setRe_ref(1);
+
 				}else {
 					bb.setIdx(boardDAO.getMaxIdx()+1);
-					//답글 관련
-//					bb.setRe_ref(boardDAO.getMaxNum()+1);
+					
 				}
 				// readcount 0 넣기
 				bb.setRead_count(0);
