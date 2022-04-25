@@ -15,6 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@900&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 </head>
 <header>
@@ -24,21 +25,12 @@
 
     <c:choose>
        <c:when test="${empty sessionScope.id }">
-           <c:out value="<script type='text/javascript'>alert('로그인이 필요한 공간입니다.'); </script>" escapeXml="false"/>
-           
-           <script type="text/javascript">
-            $(document).ready(function() {
-                location.href = "../member/loginForm";
-//                 alert("로그인이 필요한 공간입니다.");
-            });
-           </script>
+           <c:out value="<script type='text/javascript'>alert('로그인이 필요한 공간입니다.'); </script>" escapeXml="false" />
+           <c:import url="../member/loginForm.jsp"/>
        </c:when>
        <c:otherwise>
-                    하늘에 띄우는 편지
+                  하늘에 띄우는 편지
         
-<%--            <a class="child toMe" href='<c:url value="/board/to_me"/>'>나에게 띄우는 편지</a> --%>
-<%--            <a class="child toFriend" href='<c:url value="/board/to_friend"/>'>친구에게 띄우는 편지</a> --%>
-<%--            <a class="child toSky" href='<c:url value="/board/to_sky"/>'>하늘에 띄우는 편지</a> --%>
        </c:otherwise>
     </c:choose>
 
