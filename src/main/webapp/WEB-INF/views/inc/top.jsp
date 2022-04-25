@@ -6,11 +6,6 @@
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 <link href="${path}/resources/css/default.css" rel="stylesheet"/> 
 
-<!-- 폰트 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@900&display=swap" rel="stylesheet">
-
 
 <!-- 로고 -->
 <span class="logo">
@@ -45,5 +40,5 @@
 	</ul>
 </nav>
 
-
+<!-- <hr class="line"> -->
 

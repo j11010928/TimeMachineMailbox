@@ -4,7 +4,7 @@
 	outline:0;
     margin: 0; 
     padding: 0; 
-    font-family: 'Noto Serif KR', serif; 
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 18px;
 }
 
@@ -16,7 +16,7 @@ body{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background-color: #4271ce;
+	background-color: #2C304D;
 }
 canvas {
 	width: 100%;

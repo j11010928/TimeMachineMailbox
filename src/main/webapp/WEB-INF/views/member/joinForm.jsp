@@ -10,7 +10,7 @@
 
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 <link href="${path}/resources/css/default.css" rel="stylesheet"/> 
-
+<link href="${path}/resources/css/main.css" rel="stylesheet"/> 
 
 </head>
 <header>
@@ -19,12 +19,19 @@
 
 <body>
     <form action='<c:url value="/member/join"/>' method="post">
-        아이디 <input type="text" name="id"><br>
-        비밀번호 <input type="password" name="pass"><br>
-        이름 <input type="text" name="name"><br>
-        이메일 <input type="email" name="email"><br>
-        휴대폰번호 <input type="text" name="phone"><br>
-        <input type = "submit" value = "회원가입">
+        <div>로그인</div>
+        <div>아이디<input type="text" name="id"></div><br>
+        <div>비밀번호<input type="password" name="pass"></div><br>
+        <div>비밀번호 확인<input type="password" name="pass"></div><br>
+        
+        <div>회원정보</div>
+        <div>이름<input type="text" name="name"></div><br>
+        <div>별명<input type="text" name="name"></div><br>
+        <div>이메일<input type="email" name="email"></div><br>
+        <div>전화번호<input type="text" name="phone"></div><br>
+        <div>서비스 약관에 동의합니다.</div>
+        <div class="provision"><a>약관보기</a></div>
+        <input type = "submit" value = "가입 완료">
     </form>
 </body>
 </html>
