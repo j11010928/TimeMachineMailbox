@@ -36,6 +36,7 @@
                 <input type="submit" value="로그인" id="submit">
                 <input type="reset" value="취소">
            </div>
+           <div><a href='<c:url value="/member/joinForm"/>'>회원가입</a></div>
     </form>
 </body>
 </html>

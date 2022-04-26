@@ -14,28 +14,22 @@
 
 <!-- 로그인 | 회원가입 -->
 <nav>
-	<ul class="loginBar">
+	<ul class="menu">
 	<!-- session이 null이 아닐 때 -->
 	<c:if test="${! empty sessionScope.id }">
-		<li class="mypage">
-		  <a href='<c:url value="/member/mypage"/>'>${sessionScope.id }</a> 님
-		</li>
-		<li class="logout">
-          <a href='<c:url value="/member/logout"/>'>로그아웃</a>
-        </li>
-         
+		<li class="mypage"><a href='<c:url value="/member/mypage"/>'>${sessionScope.id }</a> 님</li>
+		<li class="logout"><a href='<c:url value="/member/logout"/>'>로그아웃</a></li>
+        <li class="time"><a href='<c:url value="/"/>'>타임머신</a></li>
+        <li class="rainbow"><a href='<c:url value="/"/>'>무지개다리</a></li>
+        <li class="side"><a href='<c:url value="/"/>'>---</a></li> 
 	</c:if>
-	</ul>
-	
-	<ul class="mypageBar">
+
 	<!-- session이 null일 때 -->
 	<c:if test="${empty sessionScope.id }">
-	    <li class="login">
-		  <a href='<c:url value="/member/loginForm"/>'>로그인</a>   
-	    </li>
-	    <li class="join">
-		  <a href='<c:url value="/member/joinForm"/>'>회원가입</a>
-	    </li>
+	    <li class="login"><a href='<c:url value="/member/loginForm"/>'>로그인</a></li>
+	    <li class="time"><a href='<c:url value="/"/>'>타임머신</a></li>
+	    <li class="rainbow"><a href='<c:url value="/"/>'>무지개다리</a></li>
+        <li class="side"><a href='<c:url value="/"/>'>---</a></li>
 	</c:if>
 	</ul>
 </nav>
