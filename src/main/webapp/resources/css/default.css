@@ -23,6 +23,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    /* 상단바 밑부분 표시 */
     border-bottom: solid 2px;
     border-bottom-color: #4271CE;
 /*     z-index: 999; */
@@ -32,8 +34,12 @@ body {
     background-color: #2C304D;
     color:#FFFFFF;
     padding-top: 130px;
-/*     padding: 35px; */
-/*     margin-top: 120px; */
+
+/*     padding: 10px; */
+    font-weight: bold;
+/*     justify-content: space-between; */
+/*     align-items: center; */
+
 }
 
 a{
@@ -44,29 +50,22 @@ a{
 a:link, a:visited {color: #FFFFFF;}
 a:hover, a:active {color: #4271CE;}
 
-.logo{
+.logo {
     float: left;
     padding: 10px;
     margin: 10px;
 }
 
-.loginBar, .mypageBar{
+.menu {
     float: right;
     overflow: hidden;
     list-style: none;
 }
 
-.login, .mypage{
-    padding: 10px 0 10px 20px;
-/*     margin: 10px; */
-    float: left;
-
+.menu li {
+	float: left;
+	padding: 10px 0 10px 20px;
 }
 
-.join, .logout{
-    padding: 10px 20px 10px 20px;
-/*     margin: 10px; */
-    float: right;
-}
 
 

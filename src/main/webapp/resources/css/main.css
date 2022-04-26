@@ -7,11 +7,6 @@
     font-size: 18px;
 }
 
-body {
-    color:#2C304D;
-    padding-top: 130px;
-}
-
 .parent {
   display: flex;
   border: 2px dotted;
