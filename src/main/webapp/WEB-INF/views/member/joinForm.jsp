@@ -19,21 +19,22 @@
 </header>
 
 <body>
-    <form action='<c:url value="/member/join"/>' method="post">
+    <form action='<c:url value="/member/join"/>' method="post" autocomplete="off">
         <div class="joinAll">
 	        <div id="loginInfo">로그인정보</div>
-	        <div id="id">아이디<input type="text" name="id"></div><br>
-	        <div id="pass">비밀번호<input type="password" name="pass"></div><br>
-	        <div id="passCheck">비밀번호 확인<input type="password" name="pass"></div><br>
+	        <div id="joinId">아이디<input type="text" name="id" id="id" /></div><br>
+	        <div id="joinPass">비밀번호<input type="password" name="tmpPass" id="tmpPass" style="display: none;" />
+	                                 <input type="password" name="pass" id="pass"></div><br>
+	        <div id="joinPassCheck">비밀번호 확인<input type="password" name="pass" id="passCheck" /></div><br>
 	        
 	        <div id="joinInfo">회원정보</div>
-	        <div id="name">이름<input type="text" name="name"></div><br>
-	        <div id="nick">별명<input type="text" name="name"></div><br>
-	        <div id="email">이메일<input type="email" name="email"></div><br>
-	        <div id="phone">전화번호<input type="text" name="phone"></div><br>
-	        <div id="svc">서비스 약관에 동의합니다.</div>
-	        <div id="provision"><a>약관보기</a></div>
-	        <input type = "submit" value = "가입 완료">
+	        <div id="joinName">이름<input type="text" name="name" id="name" /></div><br>
+	        <div id="joinNick">별명<input type="text" name="nick" id="nick" /></div><br>
+	        <div id="joinMail">이메일<input type="email" name="email" id="email" /></div><br>
+	        <div id="joinPhone">전화번호<input type="text" name="phone" id="phone" /></div><br>
+	        <div id=svc><input type="checkbox" id="check" /> 서비스 약관에 동의합니다. 
+	                    <a href='<c:url value="/"/>' id="provision">약관보기</a></div><br>
+	        <input type="submit" value="가입 완료" id="joinComplet" />
 	    </div>
     </form>
 </body>

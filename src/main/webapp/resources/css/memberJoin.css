@@ -4,20 +4,82 @@
     margin: 0; 
     padding: 0; 
     font-family: 'Noto Sans KR', sans-serif; 
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .joinAll{
-    width: 480px;
+    width: 400px;
     height: 650px;
     margin: 0 auto;
 }
 
 #loginInfo, #joinInfo {
-	margin: 10px 0 20px 10px;
+	margin: 60px 0 30px 0px;
 	font-size: 22px;
+	clear: left;
 }
 
 #passCheck {
 	margin-bottom: 30px;
 }
+
+#joinId, #joinPass, #joinPassCheck, #joinName, #joinNick, #joinMail, #joinPhone, #svc {
+	clear: left;
+}
+
+#id, #pass, #passCheck, #name, #nick, #email, #phone {
+	float: right;
+	margin-right: 50px;
+    width: 220px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom : 2px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: #FFFFFF;
+    clear: both;
+}
+
+#svc {
+	font-size: 13px;
+	color: #4271CE;
+	margin: 30px 50px 20px 0;
+}
+
+#check {
+	float: left;
+	font-size: 13px;
+	margin-right: 10px;   
+    width: 15px;
+    height: 15px;	 
+}
+
+#provision {
+	float: right;
+	font-size: 13px;
+    margin-top: -17px;
+	color: #9D9D9D;
+	text-decoration: underline;
+	clear: both;
+}
+
+#joinComplet {
+	width: 350px;
+    height: 50px; 
+    font-weight: bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    border: none;
+    background: linear-gradient(270deg, #784AC6 0%, #29B2FF 100%);
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
