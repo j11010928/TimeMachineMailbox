@@ -15,7 +15,7 @@
 
 #loginInfo, #joinInfo {
 	margin: 60px 0 30px 0px;
-	font-size: 22px;
+	font-size: 20px;
 	clear: left;
 }
 
@@ -25,6 +25,7 @@
 
 #joinId, #joinPass, #joinPassCheck, #joinName, #joinNick, #joinMail, #joinPhone, #svc {
 	clear: left;
+	font-size: 14px;
 }
 
 #id, #pass, #passCheck, #name, #nick, #email, #phone {
@@ -38,6 +39,7 @@
     background: transparent;
     color: #FFFFFF;
     clear: both;
+    font-size: 14px;
 }
 
 #svc {
