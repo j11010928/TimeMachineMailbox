@@ -13,6 +13,7 @@ public class MemberBean {
 	private String id;
 	private String pass;
 	private String name;
+	private String nick;
 	private String email;
 	private String phone;
 	private Timestamp reg_date;

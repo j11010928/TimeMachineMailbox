@@ -6,12 +6,12 @@
 <mapper namespace="com.tmmb.mapper.MemberMapper">
 
     <select id="loginCheck" resultType="com.tmmb.domain.MemberBean">
-        SELECT * FROM member WHERE id=#{id} AND pass=#{pass}
+        SELECT * FROM member WHERE id = #{id} AND pass = #{pass}
     </select>  
   
    <insert id="joinMember" >
-   		insert into member (id,pass,name,email,phone,reg_date)
-   		value(#{id},#{pass},#{name},#{email},#{phone},#{reg_date})
+   		INSERT INTO member (id, pass, name, nick, email, phone, reg_date)
+   		VALUES(#{id}, #{pass}, #{name}, #{nick}, #{email}, #{phone}, #{reg_date})
    </insert>
   
   
