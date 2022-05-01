@@ -13,10 +13,59 @@
 <link href="${path}/resources/css/default.css" rel="stylesheet"/> 
 <link href="${path}/resources/css/memberJoin.css" rel="stylesheet"/> 
 
+<!-- js 경로 -->
+<script src="${path}/resources/js/jquery-3.5.1.js"></script>
 </head>
 <header>
     <jsp:include page="../inc/top.jsp"></jsp:include>
 </header>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $("#joinComplet").on("click", function(){
+        if($("#id").val()==""){
+            alert("아이디를 입력해주세요.");
+            $("#id").focus();
+            return false;
+        }
+        if($("#pass").val()==""){
+            alert("비밀번호를 입력해주세요.");
+            $("#pass").focus();
+            return false;
+        }
+        if($("#passCheck").val()==""){
+            alert("비밀번호를 다시 입력해주세요.");
+            $("#passCheck").focus();
+            return false;
+        }
+        if($("#name").val()==""){
+            alert("이름을 입력해주세요.");
+            $("#name").focus();
+            return false;
+        }
+        if($("#nick").val()==""){
+            alert("별명을 입력해주세요.");
+            $("#nick").focus();
+            return false;
+        }
+        if($("#email").val()==""){
+            alert("이메일을 입력해주세요.");
+            $("#email").focus();
+            return false;
+        }
+        if($("#phone").val()==""){
+            alert("전화번호를 입력해주세요.");
+            $("#phone").focus();
+            return false;
+        }
+        
+    });
+    
+        
+    
+})
+</script>
 
 <body>
     <form action='<c:url value="/member/join"/>' method="post" autocomplete="off">
