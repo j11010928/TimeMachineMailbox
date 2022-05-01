@@ -15,6 +15,7 @@ public class MemberDAOImpl implements MemberDAO {
 	private SqlSession sqlSession;
 	private static final String namespace="com.tmmb.mapper.MemberMapper";
 	
+	
 	@Override
 	// 아이디, 비밀번호 체크
 	public MemberBean loginCheck(MemberBean mb) {
@@ -22,6 +23,7 @@ public class MemberDAOImpl implements MemberDAO {
 	}
 	
 	@Override
+	// 회원가입
 	public void joinMember(MemberBean mb) {
 		sqlSession.insert(namespace + ".joinMember",mb);
 	}
